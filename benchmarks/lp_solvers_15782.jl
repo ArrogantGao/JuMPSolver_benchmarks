@@ -1,5 +1,5 @@
 include("utils.jl")
-using CDDLib, Clarabel, Cbc, COSMO, DSDP, ECOS, GLPK, HiGHS, Hypatia, Ipopt, Loraine, MadNLP, OSQP, ProxSDP, SCIP, SCS, SDPA, Tulip
+using CDDLib, Clarabel, Cbc, COSMO, DSDP, ECOS, GLPK, HiGHS, Hypatia, Ipopt, Loraine, MadNLP, OSQP, ProxSDP, SCIP, SCS, SDPA, Tulip, CPLEX
 
 function solve_lp(solver, weights::AbstractVector, subsets::Vector{Vector{Int}}, num_items::Int)
     nsc = length(subsets)
@@ -53,7 +53,9 @@ function main()
         SCIP, 
         SCS, # solve failed
         SDPA, 
-        Tulip]
+        Tulip,
+        CPLEX
+    ]
         try
             @info "solver = $(solver)"
             picked_scs = solve_lp(solver, weights, subsets, num_items)

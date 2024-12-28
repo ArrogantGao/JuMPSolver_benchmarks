@@ -1,5 +1,5 @@
 include("utils.jl")
-using GLPK, SCIP, HiGHS
+using GLPK, SCIP, HiGHS, CPLEX
 
 function solve_ip(solver, weights::AbstractVector, subsets::Vector{Vector{Int}}, num_items::Int)
     nsc = length(subsets)
@@ -34,7 +34,7 @@ function main()
 
     CSV.write("data/ip_solvers_15782.csv", DataFrame(solver=[], cx=Float64[], time=Float64[]))
 
-    for solver in [SCIP, HiGHS, GLPK]
+    for solver in [SCIP, HiGHS, GLPK, CPLEX]
         try
             @info "solver = $(solver)"
             picked_scs = solve_ip(solver, weights, subsets, num_items)
