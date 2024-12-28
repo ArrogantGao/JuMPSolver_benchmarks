@@ -12,14 +12,14 @@ function solve_ip(solver, weights::AbstractVector, subsets::Vector{Vector{Int}},
     end
 
     model = Model(solver.Optimizer)
-    # !solver.verbose && set_silent(model)
+    set_silent(model)
     @variable(model, 0 <= x[i = 1:nsc] <= 1, Int)
     @objective(model, Min, sum(x[i] * weights[i] for i in 1:nsc))
     for i in 1:num_items
         @constraint(model, sum(x[j] for j in sets_id[i]) >= 1)
     end
 
-    @suppress optimize!(model)
+    optimize!(model)
     xs = value.(x)
     @assert OptimalBranchingCore.is_solved(xs, sets_id, num_items)
     return OptimalBranchingCore.pick_sets(xs, subsets, num_items)
