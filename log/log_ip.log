@@ -1,0 +1,132 @@
+[ Info: solver = SCIP
+feasible solution found by trivial heuristic after 0.0 seconds, objective value 3.856935e+02
+presolving:
+   (0.1s) running MILP presolver
+   (0.1s) MILP presolver found nothing
+(round 1, exhaustive) 0 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 71 upgd conss, 0 impls, 0 clqs
+(round 2, fast)       24 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 0 chg coeffs, 71 upgd conss, 0 impls, 0 clqs
+(round 3, fast)       24 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 24 chg coeffs, 71 upgd conss, 0 impls, 0 clqs
+(round 4, exhaustive) 7422 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 24 chg coeffs, 71 upgd conss, 0 impls, 0 clqs
+(round 5, fast)       7422 del vars, 0 del conss, 0 add conss, 0 chg bounds, 0 chg sides, 53258 chg coeffs, 71 upgd conss, 0 impls, 0 clqs
+   (0.3s) running MILP presolver
+   (0.3s) MILP presolver found nothing
+   (0.3s) probing: 51/8360 (0.6%) - 0 fixings, 0 aggregations, 0 implications, 0 bound changes
+   (0.3s) probing aborted: 50/50 successive totally useless probings
+   (0.4s) symmetry computation started: requiring (bin +, int -, cont +), (fixed: bin -, int +, cont -)
+   (0.4s) symmetry computation finished: 5 generators found (max: 1500, log10 of symmetry group size: 2.6) (symcode time: 0.03)
+presolving (6 rounds: 6 fast, 3 medium, 3 exhaustive):
+ 7422 deleted vars, 0 deleted constraints, 0 added constraints, 0 tightened bounds, 0 added holes, 0 changed sides, 53258 changed coefficients
+ 0 implications, 0 cliques
+presolved problem has 8360 variables (8360 bin, 0 int, 0 impl, 0 cont) and 71 constraints
+     71 constraints of type <logicor>
+Presolving Time: 0.40
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+t 0.4s|     1 |     0 |     0 |     - | trivial|   0 |8360 |  71 |   0 |   0 |  0 |   0 |   0 | 0.000000e+00 | 2.483378e+02 |    Inf | unknown
+p 0.4s|     1 |     0 |     0 |     - |   locks|   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 0.000000e+00 | 9.645062e-01 |    Inf | unknown
+  0.5s|     1 |     0 |   163 |     - |   150M |   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 2.715178e-02 | 9.645062e-01 |3452.28%| unknown
+r 0.5s|     1 |     0 |   163 |     - |simplero|   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 2.715178e-02 | 4.158188e-02 |  53.15%| unknown
+r 0.5s|     1 |     0 |   163 |     - |rounding|   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 2.715178e-02 | 4.135402e-02 |  52.31%| unknown
+r 0.5s|     1 |     0 |   163 |     - |shifting|   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 2.715178e-02 | 4.112616e-02 |  51.47%| unknown
+i 0.5s|     1 |     0 |   163 |     - |  oneopt|   0 |8360 |  71 |  71 |   0 |  0 |   0 |   0 | 2.715178e-02 | 2.760430e-02 |   1.67%| unknown
+  0.5s|     1 |     0 |   163 |     - |   155M |   0 |8360 |  71 |  71 |   0 |  1 |   0 |   0 | 2.715178e-02 | 2.760430e-02 |   1.67%| unknown
+  0.6s|     1 |     0 |   163 |     - |   155M |   0 |8360 |  71 |  71 |   0 |  1 |   0 |   0 | 2.715178e-02 | 2.760430e-02 |   1.67%| unknown
+d 0.6s|     1 |     0 |   164 |     - |farkasdi|   0 |8360 |  71 |  71 |   0 |  3 |   0 |   0 | 2.715178e-02 | 2.715178e-02 |   0.00%| unknown
+  0.6s|     1 |     0 |   164 |     - |   155M |   0 |8360 |  71 |  71 |   0 |  3 |   0 |   0 | 2.715178e-02 | 2.715178e-02 |   0.00%| unknown
+
+SCIP Status        : problem is solved [optimal solution found]
+Solving Time (sec) : 0.56
+Solving Nodes      : 1
+Primal Bound       : +2.71517770708322e-02 (10 solutions)
+Dual Bound         : +2.71517770708322e-02
+Gap                : 0.00 %
+[ Info: loss = 0.02715177707083219, cx = 1.0932155030911392
+[ Info: solver = HiGHS
+Running HiGHS 1.8.1 (git hash: 4a7f24ac6): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 1e+00]
+  Cost   [2e-04, 5e-01]
+  Bound  [1e+00, 1e+00]
+  RHS    [1e+00, 1e+00]
+Presolving model
+71 rows, 15782 cols, 118948 nonzeros  0s
+71 rows, 9892 cols, 78586 nonzeros  0s
+
+Solving MIP model with:
+   71 rows
+   9892 cols (8306 binary, 1586 integer, 0 implied int., 0 continuous)
+   78586 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ u       0       0         0   0.00%   -inf            313.2755547        Large        0    -71      0         0     0.5s
+MIP-Timing:        0.55 - starting analytic centre calculation
+ T       0       0         0   0.00%   0               0.0271517771     100.00%        0      0      0       109     0.9s
+         1       0         1 100.00%   0.0271517771    0.0271517771       0.00%        0      0      0       109     0.9s
+
+Solving report
+  Status            Optimal
+  Primal bound      0.0271517770708
+  Dual bound        0.0271517770708
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0.358385801315
+  Solution status   feasible
+                    0.0271517770708 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.91 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     109 (total)
+                    0 (strong br.)
+                    0 (separation)
+                    0 (heuristics)
+[ Info: loss = 0.02715177707083219, cx = 1.0932155030911392
+[ Info: solver = GLPK
+[ Info: loss = 0.02715177707083219, cx = 1.0932155030911392
+[ Info: solver = CPLEX
+Version identifier: 22.1.1.0 | 2022-11-28 | 9160aff4d
+Found incumbent of value 385.693505 after 0.00 sec. (0.90 ticks)
+Tried aggregator 1 time.
+MIP Presolve eliminated 0 rows and 7422 columns.
+Reduced MIP has 71 rows, 8360 columns, and 65690 nonzeros.
+Reduced MIP has 8360 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (37.83 ticks)
+Tried aggregator 1 time.
+Detecting symmetries...
+Reduced MIP has 71 rows, 8360 columns, and 65690 nonzeros.
+Reduced MIP has 8360 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.03 sec. (48.40 ticks)
+Probing time = 0.01 sec. (0.45 ticks)
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 32 threads.
+Root relaxation solution time = 0.02 sec. (11.04 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                          248.3378        0.0000           100.00%
+*     0+    0                            0.0276        0.0000           100.00%
+*     0     0      integral     0        0.0272        0.0272      149    0.00%
+Elapsed time = 0.10 sec. (120.22 ticks, tree = 0.00 MB, solutions = 3)
+[ Info: loss = 0.02715177707083219, cx = 1.0932155030911392
+
+Root node processing (before b&c):
+  Real time             =    0.10 sec. (120.98 ticks)
+Parallel b&c, 32 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.10 sec. (120.98 ticks)

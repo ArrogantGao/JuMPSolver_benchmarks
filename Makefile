@@ -8,3 +8,6 @@ init:
 benchmark:
 	$(JL) benchmarks/lp_solvers_15782.jl
 	$(JL) benchmarks/ip_solvers_15782.jl
+
+log_ip:
+	$(JL) benchmarks/log_ip.jl 2>&1 | tee log/log_ip.log
